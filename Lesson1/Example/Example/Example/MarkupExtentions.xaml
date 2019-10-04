@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:Example"
+             mc:Ignorable="d"
+             x:Class="Example.MarkupExtentions">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{x:Static local:MarkupExtentions.text}"
+                   FontSize="{x:Static local:MarkupExtentions.staticDouble}"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand"/>
+            <ListView ItemsSource="{local:CustomMarkupExtention first=123, second=456, third=789 }" x:Name="listttt"></ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

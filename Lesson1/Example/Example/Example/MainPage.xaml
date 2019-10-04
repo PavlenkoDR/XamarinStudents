@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Example.MainPage">
+
+    <ScrollView>
+        <StackLayout Padding="5">
+            <Button Text="Dynamic Load From Xaml" Clicked="Button_Clicked" BackgroundColor="#ffffff"></Button>
+            <Button Text="Markup Extentions" Clicked="Button_Clicked_1"></Button>
+            <Button Text="Picker page" Clicked="Button_Clicked_2"></Button>
+            <Button Text="Slider stepper" Clicked="Button_Clicked_3"></Button>
+            <Button Text="Web View" Clicked="Button_Clicked_4"></Button>
+            <Button Clicked="Button_Clicked_7" Text="ewfdsf"/>
+            <Frame BorderColor="Black" Padding="5">
+                <Frame.Content>
+                    <StackLayout Orientation="Vertical">
+                        <Button Text="MessagingCenter Subscribe" Clicked="Button_Clicked_5"></Button>
+                        <Button Text="MessagingCenter Sender" Clicked="Button_Clicked_6"></Button>
+                    </StackLayout>
+                </Frame.Content>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

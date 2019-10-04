@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Example.SliderStepper">
+    <ContentPage.Content>
+        <StackLayout Padding="5" HorizontalOptions="Center" VerticalOptions="Center">
+            <Label x:Name="label" Text="Holder" FontSize="Large" HorizontalOptions="Center"/>
+            <Stepper Minimum="0" Maximum="10" Increment="0.1" ValueChanged="ValueChanged"/>
+            <Slider Minimum="0" Maximum="50" Value="30" ValueChanged="ValueChanged"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
