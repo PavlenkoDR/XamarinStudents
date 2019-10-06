@@ -1,2 +1,6 @@
 
-Lesson1/Example/.vs
+*/Example/.vs
+*/Example/Example/Example.Android/obj
+*/Example/Example/Example.Android/bin
+*/Example/Example/Example/bin
+*/Example/Example/Example/obj
