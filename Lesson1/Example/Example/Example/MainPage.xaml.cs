@@ -71,7 +71,12 @@ namespace Example
 
         private void Button_Clicked_7(object sender, EventArgs e)
         {
+            Navigation.PushAsync(new ImageDrawablePage());
+        }
 
+        private void Button_Clicked_8(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ImageEntryPage());
         }
     }
 }

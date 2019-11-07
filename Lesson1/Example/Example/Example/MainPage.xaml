@@ -13,7 +13,6 @@
             <Button Text="Picker page" Clicked="Button_Clicked_2"></Button>
             <Button Text="Slider stepper" Clicked="Button_Clicked_3"></Button>
             <Button Text="Web View" Clicked="Button_Clicked_4"></Button>
-            <Button Clicked="Button_Clicked_7" Text="ewfdsf"/>
             <Frame BorderColor="Black" Padding="5">
                 <Frame.Content>
                     <StackLayout Orientation="Vertical">
@@ -22,6 +21,8 @@
                     </StackLayout>
                 </Frame.Content>
             </Frame>
+            <Button Clicked="Button_Clicked_7" Text="Image Drawable Page"/>
+            <Button Clicked="Button_Clicked_8" Text="Image Entry Page"/>
         </StackLayout>
     </ScrollView>
 
