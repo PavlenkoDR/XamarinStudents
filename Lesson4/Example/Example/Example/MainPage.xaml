@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+              xmlns:local="clr-namespace:Example"
+              mc:Ignorable="d"
+              x:Class="Example.MainPage"
+              Padding="5">
+    <CarouselPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="CustomStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="BackgroundColor" Value="Green"/>
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="Text" Value="SomeText"/>
+            </Style>
+            <Style x:Key="CustomStyleChild" TargetType="Label" BasedOn="{StaticResource Key=CustomStyle}">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="Black"/>
+            </Style>
+            <Style x:Key="EntryStyle" TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="Black"/>
+                <Style.Triggers>
+                    <Trigger Property="Entry.IsFocused" Value="True" TargetType="Entry">
+                        <Setter Property="BackgroundColor" Value="Blue" />
+                    </Trigger>
+                    <Trigger Property="Entry.IsFocused" Value="False" TargetType="Entry">
+                        <Setter Property="BackgroundColor" Value="White" />
+                    </Trigger>
+                    <EventTrigger Event="TextChanged">
+                        <local:EntryValidation/>
+                    </EventTrigger>
+                </Style.Triggers>
+            </Style>
+            <Color x:Key="HeaderColor">Red</Color>
+            <Color x:Key="DescriptionColor">Blue</Color>
+            <x:Double x:Key="FontSize">12</x:Double>
+            <OnPlatform x:TypeArguments="x:String" x:Key="PlatformText">
+                <OnPlatform.iOS>iosText</OnPlatform.iOS>
+                <OnPlatform.Android>DroidText</OnPlatform.Android>
+                <OnPlatform.Default>DefaultText</OnPlatform.Default>
+            </OnPlatform>
+            <x:Array x:Key="TestKey1" Type="{x:Type x:String}">
+                <x:String>First value</x:String>
+                <x:String>Second value</x:String>
+                <x:String>Third value</x:String>
+            </x:Array>
+            <x:Array x:Key="TestKey2" Type="{x:Type local:SuperClass}">
+                <local:SuperClass FirstField="Kek1"
+                                  SecondField="Lol1"
+                                  FontSize="22"
+                                  Image="{local:ImageResource Source=Example.Images.cola.jpg}"/>
+                <local:SuperClass FirstField="Kek2"
+                                  SecondField="LolLol"
+                                  FontSize="24"
+                                  Image="{local:ImageResource Source=Example.Images.juice.jpg}"/>
+                <local:SuperClass FirstField="dfdfdf"
+                                  SecondField="sdsdsd"
+                                  FontSize="28"
+                                  Image="{local:ImageResource Source=Example.Images.water.jpg}"/>
+            </x:Array>
+        </ResourceDictionary>
+    </CarouselPage.Resources>
+    <ContentPage>
+        <ListView ItemsSource="{StaticResource Key=TestKey1}">
+            <ListView.Header>
+                <StackLayout>
+                    <Label Text="{StaticResource Key=TextFromApplicationResources}"/>
+                    <Label Text="{StaticResource Key=PlatformText}"/>
+                    <Label Style="{StaticResource CustomStyle}"/>
+                    <Label Style="{StaticResource CustomStyleChild}"/>
+                    <Entry Style="{StaticResource EntryStyle}"/>
+                </StackLayout>
+            </ListView.Header>
+        </ListView>
+    </ContentPage>
+    <ContentPage>
+        <ListView ItemsSource="{StaticResource Key=TestKey2}" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="5">
+                            <Label Text="{Binding FirstField}" FontSize="{Binding FontSize}">
+                                <Label.TextColor>
+                                    <OnPlatform x:TypeArguments="Color" Default="Aqua">
+                                        <On Platform="Android" Value="Red"/>
+                                        <On Platform="iOS" Value="Blue"/>
+                                    </OnPlatform>
+                                </Label.TextColor>
+                            </Label>
+                            <Label Text="{Binding SecondField}" FontSize="{StaticResource Key=FontSize}"></Label>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage>
+    <ContentPage>
+        <ListView ItemsSource="{StaticResource Key=TestKey2}" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding FirstField}"
+                              Detail="{Binding SecondField}"
+                              TextColor="{StaticResource HeaderColor}"
+                              DetailColor="{StaticResource DescriptionColor}">
+                    </TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage>
+    <ContentPage>
+        <ListView ItemsSource="{StaticResource Key=TestKey2}" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell Text="{Binding FirstField}"
+                               Detail="{Binding SecondField}"
+                               TextColor="{StaticResource HeaderColor}"
+                               DetailColor="{StaticResource DescriptionColor}"
+                               ImageSource="{Binding Image}">
+                    </ImageCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage>
+</CarouselPage>
