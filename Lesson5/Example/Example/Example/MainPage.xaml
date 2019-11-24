@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+              xmlns:local="clr-namespace:Example"
+              mc:Ignorable="d"
+              x:Class="Example.MainPage"
+              Padding="5">
+    <CarouselPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="CustomStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="BackgroundColor" Value="Green"/>
+                <Setter Property="FontSize" Value="Large"/>
+                <Setter Property="Text" Value="SomeText"/>
+            </Style>
+            <Style x:Key="CustomStyleChild" TargetType="Label" BasedOn="{StaticResource Key=CustomStyle}">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="Black"/>
+            </Style>
+        </ResourceDictionary>
+    </CarouselPage.Resources>
+    <ContentPage>
+        <StackLayout>
+            <Label Style="{StaticResource CustomStyle}"
+                   BindingContext="{x:Reference entry}"
+                   Text="{Binding Path=Text}"/>
+            <Entry Text="{Binding Source={x:Reference Name=entry}, Path=Text, Mode=OneWay}"/>
+            <Entry x:Name="entry" Completed="entry_Completed"/>
+            <Label FontSize="Large" Text="{Binding Source={x:Reference Name=slider}, 
+                                           Path=Value, 
+                                           StringFormat='Selected: {0}'}" />
+            <Slider x:Name="slider" Minimum="0" Maximum="50" Value="30" />
+            <local:HeaderView Text="CCCC"
+                              TextColor="Black"
+                              LongPressEvent="HeaderView_LongPressEvent"/>
+            <ListView x:Name="listView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Clear" Clicked="MenuItem_Clicked" />
+                            </ViewCell.ContextActions>
+                            <StackLayout>
+                                <Label Text="{Binding CustomText}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage>
+</CarouselPage>
