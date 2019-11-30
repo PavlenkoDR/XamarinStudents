@@ -5,7 +5,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="App2.MainPage">
-
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Share" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
     <Grid Padding="10">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -13,7 +15,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <StackLayout x:Name="left" Grid.Column="0" VerticalOptions="Start">
-
+            
             </StackLayout>
             <StackLayout x:Name="right" Grid.Column="1" VerticalOptions="Start">
 

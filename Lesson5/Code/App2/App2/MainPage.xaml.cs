@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Plugin.Share;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
@@ -38,36 +39,50 @@ namespace App2
                 Navigation.PushAsync(editor2);
             };
             label.GestureRecognizers.Add(tapGestureRecognizer);
-            var swipe = new SwipeGestureRecognizer();
+            var pan = new PanGestureRecognizer();
 
             if (right_)
             {
-                swipe.Direction = SwipeDirection.Right;
-                swipe.Swiped += (swipeSender, swipeEventArg) =>
+                double totalX = 0;
+                pan.PanUpdated += async (panSender, panArgs) =>
                 {
-                    right.Children.Remove(swipeSender as Frame);
+                    switch (panArgs.StatusType)
+                    {
+                        case GestureStatus.Canceled:
+                        case GestureStatus.Started:
+                            frame.TranslationX = 0;
+                            break;
+                        case GestureStatus.Completed:
+                            if (totalX > 0)
+                            {
+                                if (await DisplayAlert("Confirm the deleting", "Are you sure?", "Yes!", "No"))
+                                {
+                                    right.Children.Remove(panSender as Frame);
+                                }
+                                totalX = 0;
+                            }
+                            frame.TranslationX = 0;
+                            break;
+                        case GestureStatus.Running:
+                            if (panArgs.TotalX > 0)
+                            {
+                                frame.TranslationX = panArgs.TotalX;
+                                totalX = panArgs.TotalX;
+                            }
+                            break;
+                    }
                 };
-                frame.GestureRecognizers.Add(swipe);
+                frame.GestureRecognizers.Add(pan);
                 right.Children.Add(frame);
             }
             else
             {
-                swipe.Direction = SwipeDirection.Left;
-                swipe.Swiped += async (swipeSender, swipeEventArg) =>
-                {
-                    if (await DisplayAlert("Confirm the deleting", "Are you sure?", "Yes!", "No"))
-                    {
-                        left.Children.Remove(frame);
-                    }
-                };
-                frame.GestureRecognizers.Add(swipe);
                 left.Children.Add(frame);
             }
         }
         public MainPage()
         {
             InitializeComponent();
-
 
             string newName = counterLeft + "Left.txt";
             string newFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), newName);
@@ -92,6 +107,19 @@ namespace App2
             }
             //counterRight = Math.Max(0, counterRight - 1);
         }
+
+        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            if (CrossShare.IsSupported)
+            {
+                CrossShare.Current.Share(new Plugin.Share.Abstractions.ShareMessage()
+                {
+                    Title = "Title",
+                    Text = "Body Text"
+                });
+            }
+        }
+
         private void Button_Clicked(object sender, EventArgs e)
         {
             EditorPage editor = new EditorPage();

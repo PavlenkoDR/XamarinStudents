@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\1.jpg" />
+    <None Remove="Images\npc.batya.png" />
+    <None Remove="Images\npc.ponasenkov.png" />
+    <None Remove="Images\npc.unknown.png" />
+    <None Remove="Images\npc.witness.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\1.jpg" />
+    <EmbeddedResource Include="Images\npc.batya.png" />
+    <EmbeddedResource Include="Images\npc.ponasenkov.png" />
+    <EmbeddedResource Include="Images\npc.unknown.png" />
+    <EmbeddedResource Include="Images\npc.witness.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.2.0.709249" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.2.0" />
+  </ItemGroup>
+</Project>
