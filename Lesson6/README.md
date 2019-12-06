@@ -1,6 +1,10 @@
 # Lesson 6 multithreading
 
-Thread
+## Thread
+
+`Thread` представляет собой физический, системный поток выполнения(инкапсулирует его)
+
+Fields:
 * **`CurrentThread`** - возвращает ссылку на выполняемый поток
 * **`IsAlive`** - работает ли поток
 * **`IsBackground`** - фоновый ли поток
@@ -422,3 +426,374 @@ public void Read()
 }
 ```
 
+## Task Parallel Library
+
+`Task` является абстракцией, представляющей асинхронную операцию.
+
+Исполнением задач управляет планировщик задач, который работает с пулом потоков. Это, например, означает, что несколько задач могут разделять один и тот же поток.
+
+```cs
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Start");
+            Task task = new Task(() =>
+            {
+                Console.WriteLine(">");
+                for (int i = 0; i < 10; ++i)
+                {
+                    Thread.Sleep(500);
+                    Console.WriteLine("!");
+                }
+            });
+            task.Start();
+
+            for (int i = 0; i < 60; i++)
+            {
+                Console.Write(".");
+                Thread.Sleep(100);
+            }
+
+            Console.WriteLine("Done.");
+            Console.ReadLine();
+        }
+    }
+}
+```
+
+`Task.CurrentId` возвращает исполняемую в настоящий момент задачу или же пустое значение, если вызывающий код не является задачей
+
+```cs
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Foo()
+        {
+            Console.WriteLine($"> Current task #{Task.CurrentId}");
+            for (int i = 0; i < 10; ++i)
+            {
+                Thread.Sleep(500);
+                Console.WriteLine($"! Current task #{Task.CurrentId}");
+            }
+        }
+
+        static void Main()
+        {
+            Console.WriteLine("Start");
+            Task task1 = new Task(Foo);
+            Task task2 = new Task(Foo);
+            task1.Start();
+            Thread.Sleep(250);
+            task2.Start();
+
+            for (int i = 0; i < 60; i++)
+            {
+                Console.Write(".");
+                Thread.Sleep(100);
+            }
+
+            Console.WriteLine("Done.");
+            Console.ReadLine();
+        }
+    }
+}
+```
+
+С помощью метода `Task.Wait()` можно дождаться окончания выполнения задачи.
+
+Если последовательность завершения задач не важна, то можно дожидаться их окончания с помощью `Task.WaitAll(params Task[] tasks)`
+
+Если нужно дожидаться окончания потоков в другом месте, не блокируя основной поток, то можно вызвать `Task.WhenAll(params Task[] tasks)`, который в свою очередь породит еще один `Task`, завершение которого будет означать окончание переданных в него тасков
+
+Если необходимо дождаться завершения хотя бы одной задачи, то можно воспользоваться `Task.WaitAny(params Task[] tasks)`
+
+```cs
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Foo()
+        {
+            Console.WriteLine($"> Current task #{Task.CurrentId}");
+            for (int i = 0; i < 10; ++i)
+            {
+                Thread.Sleep(500);
+                Console.WriteLine($"! Current task #{Task.CurrentId}");
+            }
+        }
+
+        static void Main()
+        {
+            Console.WriteLine("Start");
+            Task task1 = new Task(Foo);
+            Task task2 = new Task(Foo);
+            task1.Start();
+            task2.Start();
+
+            Task.WaitAll(task1, task2);
+
+            Console.WriteLine("Done.");
+            Console.ReadLine();
+        }
+    }
+}
+```
+
+В программах, которые используют много задач, имеет смысл использовать команду `Task.Dispose()`. Она сообщает gc, что ресурсы, которые использовались в таске, можно уже сейчас освободить.
+
+Из задач можно возвращать значения
+
+```cs
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static long Foo()
+        {
+            var start = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+            Console.WriteLine($"> Current task #{Task.CurrentId}");
+            for (int i = 0; i < 10; ++i)
+            {
+                Thread.Sleep(500);
+                Console.WriteLine($"! Current task #{Task.CurrentId}");
+            }
+            return DateTimeOffset.Now.ToUnixTimeMilliseconds() - start;
+        }
+
+        static void Main()
+        {
+            var start = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+            Console.WriteLine("Start");
+            var task1 = new Task<long>(Foo);
+            var task2 = new Task<long>(Foo);
+
+            task1.Start();
+            task2.Start();
+
+            Task.WaitAll(task1, task2);
+
+            Console.WriteLine($"Task1 time: {task1.Result}");
+            Console.WriteLine($"Task2 time: {task2.Result}");
+            Console.WriteLine($"Sum time: {DateTimeOffset.Now.ToUnixTimeMilliseconds() - start}");
+
+            Console.WriteLine("Done.");
+            Console.ReadLine();
+        }
+    }
+}
+```
+
+## TaskFactory
+
+Приведенные ранее примеры программ были составлены не так эффективно, как следовало бы, поскольку задачу можно создать и сразу же начать ее исполнение, вызвав метод `StartNew()`, определенный в классе `TaskFactory`. В классе `TaskFactory` предоставляются различные методы, упрощающие создание задач и управление ими.
+
+*Читаем `Task.Factory.StartNew()`, пишем `Task.Run()`*
+
+```cs
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Foo()
+        {
+            Console.WriteLine($"> Current task #{Task.CurrentId}");
+            for (int i = 0; i < 10; ++i)
+            {
+                Thread.Sleep(500);
+                Console.WriteLine($"! Current task #{Task.CurrentId}");
+            }
+        }
+
+        static void Main()
+        {
+            Console.WriteLine("Start");
+            Task task1 = Task.Factory.StartNew(Foo);
+            Task task2 = Task.Factory.StartNew(Foo);
+
+            Task.WaitAll(task1, task2);
+
+            Console.WriteLine("Done.");
+            Console.ReadLine();
+        }
+    }
+}
+```
+
+Одной из новаторских и очень удобных особенностей библиотеки TPL является возможность создавать продолжение задачи. Продолжение — это одна задача, которая автоматически начинается после завершения другой задачи. Создать продолжение можно, в частности, с помощью метода `ContinueWith()`, определенного в классе `Task`.
+
+```cs
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Foo()
+        {
+            Console.WriteLine($"> Current task #{Task.CurrentId}");
+            for (int i = 0; i < 10; ++i)
+            {
+                Thread.Sleep(500);
+                Console.WriteLine($"! Current task #{Task.CurrentId}");
+            }
+        }
+
+        static void Main()
+        {
+            Console.WriteLine("Start");
+            Task task1 = Task.Factory.StartNew(Foo);
+            var task2 = task1.ContinueWith((Task task) => {
+                Console.WriteLine($"@ Continued task #{task.Id}");
+                task.Dispose();
+                Foo();
+            });
+
+            Task.WaitAll(task1, task2);
+
+            Console.WriteLine("Done.");
+            Console.ReadLine();
+        }
+    }
+}
+```
+
+## Cancel Task
+
+```cs
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Foo(CancellationToken cancelTok)
+        {
+            Console.WriteLine($"> Current task #{Task.CurrentId}");
+            for (int i = 0; i < 10; ++i)
+            {
+                if (cancelTok.IsCancellationRequested)
+                {
+                    Console.WriteLine($"! Task #{Task.CurrentId} canceled");
+                    break;
+                }
+                Thread.Sleep(500);
+                Console.WriteLine($"! Current task #{Task.CurrentId}");
+            }
+        }
+
+        static void Main()
+        {
+            Console.WriteLine("Start");
+            var cancellationTokenSource = new CancellationTokenSource();
+            var task1 = Task.Factory.StartNew(() =>
+            {
+                Foo(cancellationTokenSource.Token);
+            });
+            var task2 = Task.Factory.StartNew(() =>
+            {
+                Foo(cancellationTokenSource.Token);
+            });
+
+            Thread.Sleep(2000);
+
+            cancellationTokenSource.Cancel();
+
+            Task.WaitAll(task1, task2);
+
+            Console.WriteLine("Done.");
+            Console.ReadLine();
+        }
+    }
+}
+```
+
+## Parallel
+
+Одним из главных классов в TPL является `System.Threading.Tasks.Parallel`. Этот класс поддерживает набор методов, которые позволяют выполнять итерации по коллекции данных (точнее, по объектам, реализующим `IEnumerable<T>`) в параллельном режиме. Этот класс поддерживает два статических метода — `Parallel.For()` и `Parallel.ForEach()`, для каждого из которых определены многочисленные перегруженные версии.
+
+Вызов метода `Break()` формирует запрос на как можно более раннее прекращение параллельно выполняемого цикла, что может произойти через несколько шагов цикла после вызова метода `Break()`. Но все шаги цикла до вызова метода `Break()` все же выполняются. Следует, также иметь в виду, что отдельные части цикла могут и не выполняться параллельно. Так, если выполнено 10 шагов цикла, то это еще не означает, что все эти 10 шагов представляют 10 первых значений переменной управления циклом.
+
+```cs
+static long Foo()
+{
+    var start = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+    Console.WriteLine($"> Current task #{Task.CurrentId}");
+    Parallel.For(0, 10, (i, state) =>
+    {
+        Thread.Sleep(500);
+        Console.WriteLine($"! Current task #{Task.CurrentId} For iteration #{i}");
+        state.Break();
+    });
+    Parallel.ForEach(new int[] { 1, 2, 3, 4 }, (i) =>
+    {
+        Thread.Sleep(500);
+        Console.WriteLine($"! Current task #{Task.CurrentId} ForEach value #{i}");
+    });
+    return DateTimeOffset.Now.ToUnixTimeMilliseconds() - start;
+}
+```
+
+Метод `Invoke()`, определенный в классе `Parallel`, позволяет выполнять один или несколько методов, указываемых в виде его аргументов. Ключевое отличие от `Task.Factory.StartNew` состоит в том, что вызов `Parallel.Invoke()` - блокирующий
+
+```cs
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Foo()
+        {
+            Console.WriteLine($"> Current task #{Task.CurrentId}");
+            for (int i = 0; i < 10; ++i)
+            {
+                Thread.Sleep(500);
+                Console.WriteLine($"! Current task #{Task.CurrentId}");
+            }
+        }
+
+        static void Main()
+        {
+            Console.WriteLine("Start");
+            Parallel.Invoke(Foo, Foo);
+            Console.WriteLine("Done.");
+            Console.ReadLine();
+        }
+    }
+}
+```
+
+1. [Потоки и файлы](https://professorweb.ru/my/csharp/thread_and_files/1/thread_index.php)
+2. [Многопоточность](https://metanit.com/sharp/tutorial/11.1.php)
+3. [Параллельное программирование и библиотека TPL](https://metanit.com/sharp/tutorial/12.1.php)
+4. [Task.Run vs Task.Factory.StartNew](https://devblogs.microsoft.com/pfxteam/task-run-vs-task-factory-startnew/)
