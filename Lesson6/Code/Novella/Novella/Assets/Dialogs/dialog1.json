@@ -1,0 +1,41 @@
+﻿ {
+    "background" : "1.jpg",
+    "steps" : [
+        {
+            "npc" : "npc.batya",
+            "text" : "А?",
+            "message" : "throwAction1"
+        },
+        {
+            "npc" : "npc.ponasenkov",
+            "text" : "Жалкая букашка!\nДешевка!"
+        },
+        {
+            "npc" : "npc.batya",
+            "text" : "Нормально",
+            "message" : "throwAction2"
+        }
+    ],
+    "options" :
+    {
+        "npc" : "npc.batya",
+        "text" : "some text",
+        "message" : "throwAction2",
+        "selectors" : [
+            {
+                "text" : "some text 2",
+                "dialogTrigger" : "dialog2",
+                "message" : "throwAction2"
+            },
+            {
+                "text" : "some text 3",
+                "dialogTrigger" : "dialog3",
+                "message" : "throwAction3"
+            },
+            {
+                "text" : "some text 4",
+                "dialogTrigger" : "dialog4"
+            }
+        ]
+    }
+}
