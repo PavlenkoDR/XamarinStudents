@@ -11,7 +11,7 @@ namespace Novella.Json
     public class ResourceLoader
     {
         SortedDictionary<string, object> resources = new SortedDictionary<string, object>();
-        List<Task> tasks = new List<Task>();
+        //List<Task> tasks = new List<Task>();
         public ResourceLoader()
         {
             if (File.Exists("profile.json"))
@@ -30,10 +30,11 @@ namespace Novella.Json
             var dialogLoader = new Loader<Dialog>();
             var imageSourceLoader = new Loader<ImageSource>();
             var profileLoader = new Loader<Profile>();
+            var backroundLoader = new Loader<Background>();
             foreach (var resource in allResources)
             {
-                tasks.Add(Task.Run(() =>
-                {
+                //tasks.Add(Task.Run(() =>
+                //{
                     if (resource.Contains("Assets.Dialogs"))
                     {
                         resources.Add(resource, dialogLoader.LoadJson(resource));
@@ -48,7 +49,7 @@ namespace Novella.Json
                         Profile.Instance = Profile.Instance ?? defaultProfile;
                         resources.Add(resource, defaultProfile);
                     }
-                }));
+                //}));
             }
         }
 
@@ -75,14 +76,15 @@ namespace Novella.Json
 
         public bool isLoading()
         {
-            foreach (var task in tasks)
-            {
-                if (!task.IsCompleted)
-                {
-                    return true;
-                }
-            }
-            return false;
+            //foreach (var task in tasks)
+            //{
+            //    if (!task.IsCompleted)
+            //    {
+            //        return true;
+            //    }
+            //}
+            //return false;
+            return true;
         }
 
         public T Load<T>(string name) where T : class
@@ -96,12 +98,13 @@ namespace Novella.Json
 
         public void Wait()
         {
-            Task.WaitAll(tasks.ToArray());
+            //Task.WaitAll(tasks.ToArray());
         }
 
         public Task WhenAll()
         {
-            return Task.WhenAll(tasks.ToArray());
+            //return Task.WhenAll(tasks.ToArray());
+            return Task.Run(() => { });
         }
     }
 

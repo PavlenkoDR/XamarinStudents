@@ -1,4 +1,5 @@
-﻿using Novella.Json;
+﻿using Newtonsoft.Json;
+using Novella.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,17 +38,50 @@ namespace Novella
         public MainPage()
         {
             InitializeComponent();
-            Task.Run(() =>
-            {
+            //Task.Run(() => // fix task crash
+            //{
                 Load();
-            });
+            //});
+        }
+
+        private void LoadBackGrounds(ref List<Background> backgrounds)
+        {
+            if (File.Exists("background.json"))
+            {
+                try
+                {
+                    var json = File.ReadAllText("background.json");
+
+                    backgrounds = JsonConvert.DeserializeObject<List<Background>>(json);
+                }
+                catch
+                {
+                }
+            }
+        }
+        private string getBackgroundPath(string name, List<Background> backgrounds)
+        {
+            foreach (var background in backgrounds)
+            {
+                if (background.name == name)
+                    return background.image;
+            }
+
+            return null;
         }
 
         private async void Load()
         {
             await ResourceLoaderInstance.Instance.WhenAll();
             dialog = ResourceLoaderInstance.Instance.Load<Dialog>($"Novella.Assets.Dialogs.{Profile.Instance.active}.json");
-            backgroundImage.Source = ResourceLoaderInstance.Instance.Load<ImageSource>($"Novella.Assets.Images.Background.{dialog.background}");
+
+
+            List<Background> backgrounds = new List<Background>();
+            // var jbackgrounds = ResourceLoaderInstance.Instance. // TODO that
+
+            backgroundImage.Source = ResourceLoaderInstance.Instance.Load<ImageSource>(getBackgroundPath(dialog.background, backgrounds));
+
+
             npcLeftActive.Source = ResourceLoaderInstance.Instance.Load<ImageSource>("Novella.Assets.Images.NPC." + dialog.steps[option].npc + ".png");
             mainText.Text = dialog.steps.First()?.text ?? "";
             ++option;
