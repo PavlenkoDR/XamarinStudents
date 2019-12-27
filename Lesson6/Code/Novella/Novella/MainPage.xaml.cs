@@ -38,10 +38,7 @@ namespace Novella
         public MainPage()
         {
             InitializeComponent();
-            //Task.Run(() => // fix task crash
-            //{
-                Load();
-            //});
+            Load();
         }
 
         private void LoadBackGrounds(ref List<Background> backgrounds)
@@ -64,7 +61,9 @@ namespace Novella
             foreach (var background in backgrounds)
             {
                 if (background.name == name)
+                {
                     return background.image;
+                }
             }
 
             return null;
