@@ -459,11 +459,13 @@ namespace NavigationApp
 
 ![](2.png)
 
-1. Делегаты https://metanit.com/sharp/tutorial/3.13.php
-2. Анонимные методы https://metanit.com/sharp/tutorial/3.15.php
-3. Лямбды https://www.bestprog.net/ru/2017/11/16/lambda-expressions-general-concepts-of-lambda-expressions-lambda-operator-single-and-block-lambda-expressions_ru/#q01
-https://metanit.com/sharp/tutorial/3.16.php
-4. Делегаты Action, Predicate и Func https://metanit.com/sharp/tutorial/3.33.php
-5. Шаблоны http://www.dream-land.by/developer/csharp/class_template/
-https://shwanoff.ru/generics/
-6. Сообщения и MessagingCenter https://metanit.com/sharp/xamarin/5.4.php
+## Необходимые ссылки
+
+1. [Делегаты](https://metanit.com/sharp/tutorial/3.13.php)
+2. [Анонимные методы](https://metanit.com/sharp/tutorial/3.15.php)
+3. [Лямбды](https://www.bestprog.net/ru/2017/11/16/lambda-expressions-general-concepts-of-lambda-expressions-lambda-operator-single-and-block-lambda-expressions_ru/#q01)
+4. [Лямбды](https://metanit.com/sharp/tutorial/3.16.php)
+5. [Делегаты Action, Predicate и Func](https://metanit.com/sharp/tutorial/3.33.php)
+6. [Шаблоны](http://www.dream-land.by/developer/csharp/class_template/)
+7. [Шаблоны](https://shwanoff.ru/generics/)
+8. [Сообщения и MessagingCenter](https://metanit.com/sharp/xamarin/5.4.php)
