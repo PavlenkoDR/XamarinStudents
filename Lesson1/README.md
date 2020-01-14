@@ -10,7 +10,6 @@
   - [Преобразование типов](#%d0%9f%d1%80%d0%b5%d0%be%d0%b1%d1%80%d0%b0%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5-%d1%82%d0%b8%d0%bf%d0%be%d0%b2)
   - [Stepper и Slider](#stepper-%d0%b8-slider)
   - [Необходимые ссылки](#%d0%9d%d0%b5%d0%be%d0%b1%d1%85%d0%be%d0%b4%d0%b8%d0%bc%d1%8b%d0%b5-%d1%81%d1%81%d1%8b%d0%bb%d0%ba%d0%b8)
-- [Homework](#homework)
 
 
 # Lesson 1
@@ -161,12 +160,3 @@ Slider представляет собой горизонтальный полз
 13. [Преобразование типов](https://metanit.com/sharp/tutorial/3.11.php)
 14. [Операторы доступа к членам](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/member-access-operators#null-conditional-operators--and-)
 15. [Stepper и Slider](https://metanit.com/sharp/xamarin/3.12.php)
-
-# Homework
-
-Реализовать приложение, функционалом схожеес тем, что продемонстрировано в HW1.xd.
-Открыть этот файл можно с помощью AdobeXD.
-
-Самостоятельно разобраться с работой [Image](https://metanit.com/sharp/xamarin/3.9.php)
-
-Реализовать сохранение корзины. Для примера можно использовать следующий [пример](https://metanit.com/sharp/xamarin/6.2.php)
