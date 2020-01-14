@@ -371,10 +371,12 @@ var rate = o["Valute"]["USD"];
 ```
 ![](6.png)
 В данном случае `FlexLayout` содержит два других контейнера `FlexLayout`. Внешний контейнер размещает элементы в столбик, а вложенные контейнеры - в строку. Подобным образом мы можем создавать более сложные макеты элементов.
-1. HttpClient https://metanit.com/sharp/xamarin/10.3.php
-2. JSON
-   * https://metanit.com/sharp/xamarin/10.1.php
-   * https://pavlenkodr.github.io/World-Skills-Juniors/10-HttpClient-VK-authorization/
-   * https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_Linq_JObject_Parse.htm
-   * https://pavlenkodr.github.io/World-Skills-Juniors/12-JsonTextReader/
-3. FlexLayout https://metanit.com/sharp/xamarin/17.1.php
+
+## Необходимые ссылки
+
+1. [HttpClient](https://metanit.com/sharp/xamarin/10.3.php)
+2. [JSON](https://metanit.com/sharp/xamarin/10.1.php)
+3. [Пример использования Json](https://pavlenkodr.github.io/World-Skills-Juniors/10-HttpClient-VK-authorization/)
+4. [JObject.Parse](https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_Linq_JObject_Parse.htm)
+5. [Ручной парс JSON](https://pavlenkodr.github.io/World-Skills-Juniors/12-JsonTextReader/)
+6. [FlexLayout](https://metanit.com/sharp/xamarin/17.1.php)
