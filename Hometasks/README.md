@@ -1,4 +1,5 @@
 # HomeTasks
+<a href="http://example.com/" target="_blank">Hello, world!</a>
 * [**HW1.** Приложение для заказа товаров{:target="_blank"}](https://github.com/PavlenkoDR/XamarinStudents/tree/master/Hometasks/HW1)
 * [**HW2.** Заметки{:target="_blank"}](https://github.com/PavlenkoDR/XamarinStudents/tree/master/Hometasks/HW2)
 * [**HW3.** Визуальная новелла{:target="_blank"}](https://github.com/PavlenkoDR/XamarinStudents/tree/master/Hometasks/HW3)
