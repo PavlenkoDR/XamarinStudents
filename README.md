@@ -1,6 +1,6 @@
 # Xamarin
 
-[Домашние задания](https://github.com/PavlenkoDR/XamarinStudents/Hometasks)
+[Домашние задания](https://pavlenkodr.github.io/XamarinStudents/Hometasks)
 
 Для открытия макетов используйте Adobe XD
 
