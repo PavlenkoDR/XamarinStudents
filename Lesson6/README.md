@@ -792,6 +792,7 @@ namespace ConsoleApp2
     }
 }
 ```
+## Необходимые ссылки
 
 1. [Потоки и файлы](https://professorweb.ru/my/csharp/thread_and_files/1/thread_index.php)
 2. [Многопоточность](https://metanit.com/sharp/tutorial/11.1.php)
