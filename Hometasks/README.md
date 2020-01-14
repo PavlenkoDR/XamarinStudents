@@ -1,9 +1,9 @@
 # HomeTasks
 * [**HW1.** Приложение для заказа товаров](https://github.com/PavlenkoDR/XamarinStudents/tree/master/Hometasks/HW1)
-* **HW2.** Заметки
-* **HW3.** Визуальная новелла
-* **HW4.** Новостная лента ВК
-* **HWG.** OpenWeatherMap App
+* [**HW2.** Заметки](https://github.com/PavlenkoDR/XamarinStudents/tree/master/Hometasks/HW2)
+* [**HW3.** Визуальная новелла](https://github.com/PavlenkoDR/XamarinStudents/tree/master/Hometasks/HW3)
+* [**HW4.** Новостная лента ВК](https://github.com/PavlenkoDR/XamarinStudents/tree/master/Hometasks/HW4)
+* [**HWG.** OpenWeatherMap App](https://github.com/PavlenkoDR/XamarinStudents/tree/master/Hometasks/HWG)
 # Extra tasks:
 * **Extra task 1.**	ARGB custom markup extention + List of all colors.
 * **Extra task 2.** Добавить градиент для StackLayout.
