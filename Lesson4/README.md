@@ -829,13 +829,8 @@ public partial class MainPage : ContentPage
 
 [Примеры использования тут](https://github.com/PavlenkoDR/XamarinStudents/tree/master/Lesson4/Example/Example/Example)
 
-1. HttpClient https://metanit.com/sharp/xamarin/10.3.php
-2. JSON
-   * https://metanit.com/sharp/xamarin/10.1.php
-   * https://pavlenkodr.github.io/World-Skills-Juniors/10-HttpClient-VK-authorization/
-   * https://www.newtonsoft.com/json/help/html/M_Newtonsoft_Json_Linq_JObject_Parse.htm
-   * https://pavlenkodr.github.io/World-Skills-Juniors/12-JsonTextReader/
-3. FlexLayout https://metanit.com/sharp/xamarin/17.1.php
-4. Концепция ресурсов в Xamarin Forms https://metanit.com/sharp/xamarin/9.1.php
-5. Стили https://metanit.com/sharp/xamarin/9.2.php
-6. Триггеры https://metanit.com/sharp/xamarin/9.3.php
+## Необходимые ссылки
+
+1. [Концепция ресурсов в Xamarin Forms](https://metanit.com/sharp/xamarin/9.1.php)
+2. [Стили](https://metanit.com/sharp/xamarin/9.2.php)
+3. [Триггеры](https://metanit.com/sharp/xamarin/9.3.php)
