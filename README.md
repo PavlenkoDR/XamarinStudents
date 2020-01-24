@@ -1,5 +1,5 @@
 # Xamarin
-
+[Экзаменационные билеты](https://pavlenkodr.github.io/XamarinStudents/Exam)
 [Домашние задания](https://pavlenkodr.github.io/XamarinStudents/Hometasks)
 
 Для открытия макетов используйте Adobe XD
