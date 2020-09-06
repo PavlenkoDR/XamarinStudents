@@ -9,8 +9,9 @@
 * [Делегаты, Анонимные функции, Лямбды, Шаблоны, Сообщения](https://pavlenkodr.github.io/XamarinStudents/Lesson2)
 * [FlexLayout и Работа с веб ресурсами](https://pavlenkodr.github.io/XamarinStudents/Lesson3)
 * [Ресурсы, Стили, Триггеры](https://pavlenkodr.github.io/XamarinStudents/Lesson4)
-* [Полезные особенности C#](https://pavlenkodr.github.io/XamarinStudents/Lesson5)
 * [Треды и Таски](https://pavlenkodr.github.io/XamarinStudents/Lesson6)
+* Wear OS + Xamarin
+* [Полезные особенности C#](https://pavlenkodr.github.io/XamarinStudents/Lesson5)
 
 ## Рейтинг
 
