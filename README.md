@@ -15,4 +15,10 @@
 
 ## Рейтинг
 
-https://vk.cc/9ST0S3
+2019
+
+2 курс: https://vk.cc/9ST0S3
+
+2020
+
+2 курс: https://vk.cc/aA7iDQ
