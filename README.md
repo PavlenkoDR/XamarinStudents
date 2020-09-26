@@ -15,6 +15,8 @@
 
 ## Рейтинг
 
+Code: https://github.com/PavlenkoDR/XamarinStudentsCode
+
 2019
 
 2 курс: https://vk.cc/9ST0S3
