@@ -24,3 +24,7 @@ Code: https://github.com/PavlenkoDR/XamarinStudentsCode
 2020
 
 2 курс: https://vk.cc/aA7iDQ
+
+2021
+
+3 курс: https://vk.cc/c0uloS
