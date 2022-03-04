@@ -28,3 +28,7 @@ Code: https://github.com/PavlenkoDR/XamarinStudentsCode
 2021
 
 3 курс: https://vk.cc/c0uloS
+
+2022
+
+2 курс: https://vk.cc/cbAmRz
