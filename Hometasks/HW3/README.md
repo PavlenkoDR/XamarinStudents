@@ -73,16 +73,18 @@
 }
 ```
 * ```npc.json``` - настройки персонажей
-  * ```npc``` - персонажи по именам
+  * ```npc``` - персонажи по айди
     * ```image``` - картинка персонажа
+    * ```name``` - имя персонажа
     * ```main_theme``` - фоновый тематический звук персонажа (возможный доп)
     * ```transform``` - Настройка положения, ширины и высоты
     * ```show_animation``` - анимация появления (возможный доп)
 ```json
 "npc" : {
-    "npc.name1" :
+    "npc.id1" :
     {
         "image" : "path",
+        "name" : "Kujo",
         "main_theme" : "sound", // additional maybe 
         "transform" :
         {
@@ -93,9 +95,10 @@
             // additional maybe
         }
     },
-    "npc.ivan" :
+    "npc.id2" :
     {
         "image" : "path",
+        "name" : "Dio",
         "transform" :
         {
             // size settings
