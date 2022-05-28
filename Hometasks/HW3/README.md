@@ -27,7 +27,7 @@
     * ```message``` - Отправит ```Message.Send``` для выполнения специфичного кода
     * ```selectors``` - Кнопки с выбором ответа кода
       * ```text``` - Текст выбора
-      * ```dialogTrigger``` - Запускаемый диалог
+      * ```dialog_trigger``` - Запускаемый диалог
       * ```message``` - Отправит ```Message.Send``` для выполнения специфичного кода
 ```json
 "dialog" : {
@@ -56,17 +56,17 @@
         "selectors" : [
             {
                 "text" : "some text 2",
-                "dialogTrigger" : "dialog2",
+                "dialog_trigger" : "dialog2",
                 "message" : "throwAction2"
             },
             {
                 "text" : "some text 3",
-                "dialogTrigger" : "dialog3",
+                "dialog_trigger" : "dialog3",
                 "message" : "throwAction3"
             },
             {
                 "text" : "some text 4",
-                "dialogTrigger" : "dialog4"
+                "dialog_trigger" : "dialog4"
             }
         ]
     }
