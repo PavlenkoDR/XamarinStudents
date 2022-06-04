@@ -30,7 +30,7 @@
       * ```dialog_trigger``` - Запускаемый диалог
       * ```message``` - Отправит ```Message.Send``` для выполнения специфичного кода
 ```json
-"dialog" : {
+{
     "background" : "image1",
     "steps" : [
         {
@@ -80,7 +80,7 @@
     * ```transform``` - Настройка положения, ширины и высоты
     * ```show_animation``` - анимация появления (возможный доп)
 ```json
-"npc" : {
+{
     "npc.id1" :
     {
         "image" : "path",
@@ -112,7 +112,7 @@
     * ```main_theme``` - фоновый тематический звук фона (возможный доп)
     * ```transform``` - Настройка положения, ширины и высоты
 ```json
-"backgrounds" : {
+{
     "backgrounds1" :
     {
         "image" : "path",
