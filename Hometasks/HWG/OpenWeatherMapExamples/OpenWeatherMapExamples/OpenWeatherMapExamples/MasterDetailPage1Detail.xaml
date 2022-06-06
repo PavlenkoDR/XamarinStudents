@@ -6,7 +6,25 @@
              mc:Ignorable="d"
              x:Class="OpenWeatherMapExamples.MasterDetailPage1Detail"
              Title="Detail">
-  <StackLayout Padding="10" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+  <StackLayout Padding="10">
     <Label Text="THIS" x:Name="label" FontSize="Large" TextColor="Black"/>
-  </StackLayout>
+        <ScrollView>
+            <StackLayout x:Name="stackForecast">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="3*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="{Binding icon}"/>
+                            <Label Grid.Column="1" Text="{Binding description}"/>
+                            <Label Grid.Column="2" Text="{Binding time}"/>
+                        </Grid>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
 </ContentPage>
