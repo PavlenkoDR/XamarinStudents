@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\source\\repos\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples.iOS\\OpenWeatherMapExamples.iOS.csproj": {}
+    "C:\\dev\\XamarinStudents\\Hometasks\\HWG\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples.IOS\\OpenWeatherMapExamples.IOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\source\\repos\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples.iOS\\OpenWeatherMapExamples.iOS.csproj": {
+    "C:\\dev\\XamarinStudents\\Hometasks\\HWG\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples.IOS\\OpenWeatherMapExamples.IOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples.iOS\\OpenWeatherMapExamples.iOS.csproj",
-        "projectName": "OpenWeatherMapExamples.iOS",
-        "projectPath": "C:\\Users\\Admin\\source\\repos\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples.iOS\\OpenWeatherMapExamples.iOS.csproj",
+        "projectUniqueName": "C:\\dev\\XamarinStudents\\Hometasks\\HWG\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples.IOS\\OpenWeatherMapExamples.IOS.csproj",
+        "projectName": "OpenWeatherMapExamples.IOS",
+        "projectPath": "C:\\dev\\XamarinStudents\\Hometasks\\HWG\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples.IOS\\OpenWeatherMapExamples.IOS.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\source\\repos\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples.iOS\\obj\\",
+        "outputPath": "C:\\dev\\XamarinStudents\\Hometasks\\HWG\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples.IOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -34,8 +34,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\Admin\\source\\repos\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples.csproj": {
-                "projectPath": "C:\\Users\\Admin\\source\\repos\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples.csproj"
+              "C:\\dev\\XamarinStudents\\Hometasks\\HWG\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples.csproj": {
+                "projectPath": "C:\\dev\\XamarinStudents\\Hometasks\\HWG\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples.csproj"
               }
             }
           }
@@ -67,14 +67,14 @@
         }
       }
     },
-    "C:\\Users\\Admin\\source\\repos\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples.csproj": {
+    "C:\\dev\\XamarinStudents\\Hometasks\\HWG\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples.csproj",
+        "projectUniqueName": "C:\\dev\\XamarinStudents\\Hometasks\\HWG\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples.csproj",
         "projectName": "OpenWeatherMapExamples",
-        "projectPath": "C:\\Users\\Admin\\source\\repos\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples.csproj",
+        "projectPath": "C:\\dev\\XamarinStudents\\Hometasks\\HWG\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\source\\repos\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\obj\\",
+        "outputPath": "C:\\dev\\XamarinStudents\\Hometasks\\HWG\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -109,19 +109,27 @@
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
           "dependencies": {
+            "Microsoft.CSharp": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.6.1, )"
+              "version": "[1.7.3, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[5.0.0.2012, )"
+              "version": "[5.0.0.2401, )"
             }
           },
           "imports": [

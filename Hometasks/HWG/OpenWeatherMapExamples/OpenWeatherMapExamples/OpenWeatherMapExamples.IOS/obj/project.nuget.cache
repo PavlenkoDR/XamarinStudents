@@ -1,12 +1,41 @@
 {
   "version": 2,
-  "dgSpecHash": "LPuIAWTktRmI2oWU89tJwXMpAwh5jgYRCDAQfF9b6N6CXzOHzPL98suANvmIGlszbveVJQTbisfizI6UMF4Y0Q==",
+  "dgSpecHash": "X9npi7fK5JIlKFuAgfNlt2aTLV3z3DcTNirxsbv00n+5u6MZmSLaLj61jH8D+98J6MyJVcN7mwp4iFzLZ0RCuA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples.iOS\\OpenWeatherMapExamples.iOS.csproj",
+  "projectFilePath": "C:\\dev\\XamarinStudents\\Hometasks\\HWG\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples.IOS\\OpenWeatherMapExamples.IOS.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Обнаружено понижение версии пакета Xamarin.Essentials с 1.7.3 на 1.6.1. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n OpenWeatherMapExamples.IOS -> OpenWeatherMapExamples -> Xamarin.Essentials (>= 1.7.3) \r\n OpenWeatherMapExamples.IOS -> Xamarin.Essentials (>= 1.6.1)",
+      "libraryId": "Xamarin.Essentials",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Обнаружено понижение версии пакета Xamarin.Forms с 5.0.0.2401 на 5.0.0.2012. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n OpenWeatherMapExamples.IOS -> OpenWeatherMapExamples -> Xamarin.Forms (>= 5.0.0.2401) \r\n OpenWeatherMapExamples.IOS -> Xamarin.Forms (>= 5.0.0.2012)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
 }

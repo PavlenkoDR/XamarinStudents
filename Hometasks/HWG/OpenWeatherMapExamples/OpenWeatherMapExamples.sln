@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenWeatherMapExamples.Android", "OpenWeatherMapExamples\OpenWeatherMapExamples.Android\OpenWeatherMapExamples.Android.csproj", "{E226AD89-7212-4DF3-B564-565B4AA2634F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenWeatherMapExamples", "OpenWeatherMapExamples\OpenWeatherMapExamples\OpenWeatherMapExamples.csproj", "{5DAC5CCC-42E2-48B0-89F6-8553E3C1F1DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenWeatherMapExamples", "OpenWeatherMapExamples\OpenWeatherMapExamples\OpenWeatherMapExamples.csproj", "{5DAC5CCC-42E2-48B0-89F6-8553E3C1F1DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenWeatherMapExamples.IOS", "OpenWeatherMapExamples\OpenWeatherMapExamples.IOS\OpenWeatherMapExamples.IOS.csproj", "{DA5C7911-CD9D-4202-AD42-01C814674282}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,16 @@ Global
 		{5DAC5CCC-42E2-48B0-89F6-8553E3C1F1DF}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{5DAC5CCC-42E2-48B0-89F6-8553E3C1F1DF}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{5DAC5CCC-42E2-48B0-89F6-8553E3C1F1DF}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
+		{DA5C7911-CD9D-4202-AD42-01C814674282}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{DA5C7911-CD9D-4202-AD42-01C814674282}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{DA5C7911-CD9D-4202-AD42-01C814674282}.Debug|iPhone.Build.0 = Debug|iPhone
+		{DA5C7911-CD9D-4202-AD42-01C814674282}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{DA5C7911-CD9D-4202-AD42-01C814674282}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{DA5C7911-CD9D-4202-AD42-01C814674282}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
+		{DA5C7911-CD9D-4202-AD42-01C814674282}.Release|iPhone.ActiveCfg = Release|iPhone
+		{DA5C7911-CD9D-4202-AD42-01C814674282}.Release|iPhone.Build.0 = Release|iPhone
+		{DA5C7911-CD9D-4202-AD42-01C814674282}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{DA5C7911-CD9D-4202-AD42-01C814674282}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
