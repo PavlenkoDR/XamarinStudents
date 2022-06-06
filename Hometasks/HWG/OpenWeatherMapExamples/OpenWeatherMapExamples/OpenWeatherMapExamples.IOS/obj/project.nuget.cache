@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "LPuIAWTktRmI2oWU89tJwXMpAwh5jgYRCDAQfF9b6N6CXzOHzPL98suANvmIGlszbveVJQTbisfizI6UMF4Y0Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\OpenWeatherMapExamples\\OpenWeatherMapExamples\\OpenWeatherMapExamples.iOS\\OpenWeatherMapExamples.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
+  ],
+  "logs": []
+}
