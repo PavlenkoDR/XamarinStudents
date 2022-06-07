@@ -1,4 +1,8 @@
 /OpenWeatherMapExamples/OpenWeatherMapExamples.Android/bin
 /OpenWeatherMapExamples/OpenWeatherMapExamples.Android/obj
+/OpenWeatherMapExamples/OpenWeatherMapExamples.IOS/bin
+/OpenWeatherMapExamples/OpenWeatherMapExamples.IOS/obj
+/OpenWeatherMapExamples/OpenWeatherMapExamples.IOS/OpenWeatherMapExamples.IOS.csproj.user
 /OpenWeatherMapExamples/OpenWeatherMapExamples/bin
 /OpenWeatherMapExamples/OpenWeatherMapExamples/obj
+/.vs
