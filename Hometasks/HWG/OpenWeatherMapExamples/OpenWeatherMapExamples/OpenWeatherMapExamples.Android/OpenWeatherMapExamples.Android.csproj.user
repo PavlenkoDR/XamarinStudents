@@ -5,5 +5,6 @@
     <DefaultDevice>pixel_2_q_10_0_-_api_29</DefaultDevice>
     <AndroidDesignerPreferredTheme>Theme.AppCompat.Light.NoActionBar</AndroidDesignerPreferredTheme>
     <ActiveDebugProfile>pixel_2_q_10_0_-_api_29</ActiveDebugProfile>
+    <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
   </PropertyGroup>
 </Project>

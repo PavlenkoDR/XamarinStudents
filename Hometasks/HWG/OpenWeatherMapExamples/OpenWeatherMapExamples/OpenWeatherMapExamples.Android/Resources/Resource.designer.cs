@@ -18137,29 +18137,53 @@ namespace OpenWeatherMapExamples.Droid
 			// aapt resource value: 0x7F0801E6
 			public const int west = 2131231206;
 			
-			// aapt resource value: 0x7F0801E8
-			public const int withinBounds = 2131231208;
-			
-			// aapt resource value: 0x7F0801E7
-			public const int withText = 2131231207;
-			
-			// aapt resource value: 0x7F0801E9
-			public const int wrap = 2131231209;
-			
 			// aapt resource value: 0x7F0801EA
-			public const int wrap_content = 2131231210;
+			public const int widgetcell_container = 2131231210;
 			
 			// aapt resource value: 0x7F0801EB
-			public const int wrap_content_constrained = 2131231211;
+			public const int widgetcell_description = 2131231211;
 			
 			// aapt resource value: 0x7F0801EC
-			public const int x_left = 2131231212;
+			public const int widgetcell_image = 2131231212;
 			
 			// aapt resource value: 0x7F0801ED
-			public const int x_right = 2131231213;
+			public const int widgetcell_image_wrapper = 2131231213;
 			
 			// aapt resource value: 0x7F0801EE
-			public const int zero_corner_chip = 2131231214;
+			public const int widgetcell_time = 2131231214;
+			
+			// aapt resource value: 0x7F0801E7
+			public const int widget_background = 2131231207;
+			
+			// aapt resource value: 0x7F0801E8
+			public const int widget_listview = 2131231208;
+			
+			// aapt resource value: 0x7F0801E9
+			public const int widget_refresh = 2131231209;
+			
+			// aapt resource value: 0x7F0801F0
+			public const int withinBounds = 2131231216;
+			
+			// aapt resource value: 0x7F0801EF
+			public const int withText = 2131231215;
+			
+			// aapt resource value: 0x7F0801F1
+			public const int wrap = 2131231217;
+			
+			// aapt resource value: 0x7F0801F2
+			public const int wrap_content = 2131231218;
+			
+			// aapt resource value: 0x7F0801F3
+			public const int wrap_content_constrained = 2131231219;
+			
+			// aapt resource value: 0x7F0801F4
+			public const int x_left = 2131231220;
+			
+			// aapt resource value: 0x7F0801F5
+			public const int x_right = 2131231221;
+			
+			// aapt resource value: 0x7F0801F6
+			public const int zero_corner_chip = 2131231222;
 			
 			static Id()
 			{
@@ -18766,6 +18790,12 @@ namespace OpenWeatherMapExamples.Droid
 			
 			// aapt resource value: 0x7F0B0094
 			public const int Toolbar = 2131427476;
+			
+			// aapt resource value: 0x7F0B0095
+			public const int Widget = 2131427477;
+			
+			// aapt resource value: 0x7F0B0096
+			public const int WidgetCell = 2131427478;
 			
 			static Layout()
 			{
@@ -29622,25 +29652,28 @@ namespace OpenWeatherMapExamples.Droid
 		{
 			
 			// aapt resource value: 0x7F110000
-			public const int image_share_filepaths = 2131820544;
+			public const int appwidget_provider = 2131820544;
 			
 			// aapt resource value: 0x7F110001
-			public const int standalone_badge = 2131820545;
+			public const int image_share_filepaths = 2131820545;
 			
 			// aapt resource value: 0x7F110002
-			public const int standalone_badge_gravity_bottom_end = 2131820546;
+			public const int standalone_badge = 2131820546;
 			
 			// aapt resource value: 0x7F110003
-			public const int standalone_badge_gravity_bottom_start = 2131820547;
+			public const int standalone_badge_gravity_bottom_end = 2131820547;
 			
 			// aapt resource value: 0x7F110004
-			public const int standalone_badge_gravity_top_start = 2131820548;
+			public const int standalone_badge_gravity_bottom_start = 2131820548;
 			
 			// aapt resource value: 0x7F110005
-			public const int standalone_badge_offset = 2131820549;
+			public const int standalone_badge_gravity_top_start = 2131820549;
 			
 			// aapt resource value: 0x7F110006
-			public const int xamarin_essentials_fileprovider_file_paths = 2131820550;
+			public const int standalone_badge_offset = 2131820550;
+			
+			// aapt resource value: 0x7F110007
+			public const int xamarin_essentials_fileprovider_file_paths = 2131820551;
 			
 			static Xml()
 			{
