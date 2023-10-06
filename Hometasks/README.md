@@ -5,6 +5,7 @@
 * <a href="https://github.com/PavlenkoDR/XamarinStudents/tree/master/Hometasks/HW2/" target="_blank">**HW2.** Заметки</a>
 * <a href="https://github.com/PavlenkoDR/XamarinStudents/tree/master/Hometasks/HW3" target="_blank">**HW3.** Визуальная новелла</a>
 * <a href="https://github.com/PavlenkoDR/XamarinStudents/tree/master/Hometasks/HW4" target="_blank">**HW4.** Новостная лента ВК</a>
+* <a href="https://github.com/PavlenkoDR/XamarinStudents/tree/master/Hometasks/HW5" target="_blank">**HW5.** TikTok Wall</a>
 * <a href="https://github.com/PavlenkoDR/XamarinStudents/tree/master/Hometasks/HWG" target="_blank">**HWG.** OpenWeatherMap App</a>
 # Extra tasks:
 * **Extra task 1.**	ARGB custom markup extention + List of all colors.  
