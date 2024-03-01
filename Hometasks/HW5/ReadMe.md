@@ -83,9 +83,9 @@ https://api16-normal-c-useast1a.tiktokv.com/aweme/v1/hotsearch/aweme
 hot energy
 https://api16-normal-c-useast1a.tiktokv.com/aweme/v1/hotsearch/energy
 
-https://api.tiktokv.com/aweme/v1/playwm/?video_id=$url
-https://api16-normal-c-useast1a.tiktokv.com/aweme/v1/feed/?aweme_id=6930858277987241217
-https://api16-normal-c-useast1a.tiktokv.com/aweme/v1/comment/list/?aweme_id=6930858277987241217&count=20&cursor=20
-https://api16-normal-c-useast1a.tiktokv.com/aweme/v1/aweme/post/?user_id=6826352087568581637&count=21&min_cursor=1559466150000&aid=1128&_signature=0jFsbRAdiYt4Hiztxpb839IxbH&dytk=e56d7c22dbb1d0bb0cab80cce0d96e17
-https://api-t2.tiktokv.com/aweme/v1/aweme/post/?user_id=6913968433924326401
-https://api16-normal-c-useast1a.tiktokv.com/aweme/v1/user/profile/other/?user_id=6868565347890299906&ac=wifi&channel=googleplay&aid=1233&app_name=musical_ly&version_code=230703&version_name=23.7.3&device_platform=android&ab_version=23.7.3&ssmix=a&device_type=POT-LX17&device_brand=HUAWEI&device_model=POT-LX17&language=en&os_api=29&os_version=10&manifest_version_code=2022307030&resolution=1080%2A2340&dpi=480&update_version_code=2022307030&app_skin=white&app_type=normal&sys_region=US&pass-route=1&mcc_mnc=31050&pass-region=1&timezone_name=America%252FNew_York&carrier_region_v2=310&cpu_support64=true&host_abi=arm64-v8a&app_language=en&carrier_region=US&ac2=wifi&uoo=0&op_region=US&timezone_offset=-14400&build_number=23.7.3&locale=en&region=US&openudid=bab65b3c159a4542&cdid=1856ed1e-b818-44b1-8bf1-136ff95e429a&device_id=7187122281045952042&iid=7187123175168165678&_rticket=1674146527532&ts=1674146588
+https://api.tiktokv.com/aweme/v1/playwm/?video_id=$url  
+https://api16-normal-c-useast1a.tiktokv.com/aweme/v1/feed/?aweme_id=6930858277987241217  
+https://api16-normal-c-useast1a.tiktokv.com/aweme/v1/comment/list/?aweme_id=6930858277987241217&count=20&cursor=20  
+https://api16-normal-c-useast1a.tiktokv.com/aweme/v1/aweme/post/?user_id=6826352087568581637&count=21&min_cursor=1559466150000&aid=1128&_signature=0jFsbRAdiYt4Hiztxpb839IxbH&dytk=e56d7c22dbb1d0bb0cab80cce0d96e17  
+https://api-t2.tiktokv.com/aweme/v1/aweme/post/?user_id=6913968433924326401  
+https://api16-normal-c-useast1a.tiktokv.com/aweme/v1/user/profile/other/?user_id=6868565347890299906&ac=wifi&channel=googleplay&aid=1233&app_name=musical_ly&version_code=230703&version_name=23.7.3&device_platform=android&ab_version=23.7.3&ssmix=a&device_type=POT-LX17&device_brand=HUAWEI&device_model=POT-LX17&language=en&os_api=29&os_version=10&manifest_version_code=2022307030&resolution=1080%2A2340&dpi=480&update_version_code=2022307030&app_skin=white&app_type=normal&sys_region=US&pass-route=1&mcc_mnc=31050&pass-region=1&timezone_name=America%252FNew_York&carrier_region_v2=310&cpu_support64=true&host_abi=arm64-v8a&app_language=en&carrier_region=US&ac2=wifi&uoo=0&op_region=US&timezone_offset=-14400&build_number=23.7.3&locale=en&region=US&openudid=bab65b3c159a4542&cdid=1856ed1e-b818-44b1-8bf1-136ff95e429a&device_id=7187122281045952042&iid=7187123175168165678&_rticket=1674146527532&ts=1674146588  
